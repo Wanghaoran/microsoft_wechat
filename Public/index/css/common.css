@@ -1,0 +1,86 @@
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0; border:0;}
+body,button,input,select,textarea{font:12px/1.6  "\5FAE\8F6F\96C5\9ED1";}/*5FAE\8F6F\96C5\9ED1  Verdana, Helvetica, sans-serif*/
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+address,cite,dfn,em,var{font-style:normal;}
+code,kbd,pre,samp{font-family:courier new,courier,monospace;}
+small{font-size:12px;}
+ul,ol,li{list-style:none;}
+a:link,a:visited{color:#898989;text-decoration:none;}
+a:hover,a:active{color:#898989;text-decoration:none;}
+sup{vertical-align:text-top;}
+sub{vertical-align:text-bottom;}
+legend{color:#000;}
+fieldset,img{border:0;}
+button,input,select,textarea{font-size:100%;}
+table{border-collapse:collapse;border-spacing:0;}
+input{outline: none;}/* �����ı������ */
+textarea {outline: none;} 
+a{text-decoration:none;color:#333;outline:none;}
+a:hover{text-decoration:none;color:#F40;outline:none;}
+/* ���?�� */
+.clear:after {visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
+.clear {zoom:1; /* for IE6 IE7 */}
+.clear2{ clear:both; height:2px;}
+.clear5{ clear:both; height:5px;}
+.clear6{ clear:both; height:6px;}
+.clear10{ clear:both; height:10px;}
+.clear20{ clear:both; height:20px;}
+.clear30{ clear:both; height:30px;}
+.clear40{ clear:both; height:40px;}
+.fl{ float:left;}
+
+body{font-family:"mircrosoft yahei","微软雅黑",Tahoma, Verdana, Arial, Geneva, sans-serif;}
+html{-webkit-text-size-adjust:none;}/*chrome font-size<12px */ 
+html, body {height: 100%;}
+
+.container{ min-width:320px; width:100%;}
+a.btn_bm{ width:99px; height:30px; background:url(../images/btn_bm.png) no-repeat; background-size:99px 30px; -moz-background-size:99px 30px; display:inline-block; text-decoration:none; cursor:pointer; position:absolute; top:85%; left:50%; margin-left:-49px;}
+
+#header{min-width:320px; max-width:640px; width:100%; height:369px; background:url(../images/yjbg.jpg) repeat-x; margin:0 auto; }
+#turnplatewrapper{width:320px;height:369px; margin:0 auto; background:url(../images/plate_06.jpg) top left no-repeat;-moz-user-select:none;user-select:none;position:relative;}
+/*#turnplate{width:320px;height:369px;background:url(../images/plate_05.png) top left no-repeat;}*/
+.turnplate3{width:320px;height:369px;background:url(../images/plate_05.png) top left no-repeat;}
+#turnplate #awards{position:absolute;width:320px;height:369px;background:url(../images/plate_03.png) center no-repeat; margin:0 auto;}
+#platebtn{position:absolute;top:162px; left:125px;background:url(../images/plate_04.png) top left no-repeat;height:77px;width:77px;cursor:pointer;}
+#platebtn.hover{background-position:0 -155px }
+#turnplate #platebtn.click{background-position:0 -310px }
+#gift{width:398px;height:89px;background:url(../images/plate_gift_01.png) top left no-repeat;position:absolute;left:90px;top:720px;}
+#msg{position:absolute;display:none;top:130px;left:195px;border-radius:5px;color:#333;border:3px solid #FED33f;box-shadow:2px 2px 2px rgba(0,0,0,0.6);background:#fffcf2;width:200px;padding:10px;text-align:center;}
+
+
+#lotteryMsg .msg{font-size:16px;color:red;font-weight:bold; text-align:center;font-size:26px;color:#ba0f54;line-height:1;margin-bottom:10px;}
+#lotteryMsg .tips{text-align:center;font-size:14px;}
+#lotteryMsg .sp{border-top:1px solid #c3c3c3;border-bottom:0 none transparent;border-right:0 none transparent;border-left:0 none transparent;overflow:hidden;height:0;margin:10px 0;}
+#lotteryMsg a{color:#138cbe;}
+#lotteryMsg a:hover{color:#039;}
+#lotteryMsg .content{border:1px solid #ccc;border-radius:5px;padding:10px;background:#fff;line-height:1.5;}
+#top-menu-wrapper{height:51px;background:url(../images//bg_02.png) top center repeat-x;margin-bottom:-51px;}
+#top-menu{width:960px;margin:0 auto;}
+#top-menu a, #top-menu span{line-height:50px;display:inline-block;font-size:16px;color:#fff;text-decoration:1px 1px 2px rgba(0, 0, 0, 0.3);}
+#top-menu .user{padding-left:30px;display:inline-block;height:50px;color:#fff;background:url(../images/bg_03.png) 0 16px no-repeat;}
+
+/*jquery ui 定制 */
+body .ui-dialog{padding:0px;background:#ebeae3;box-shadow:2px 2px 5px rgba(0,0,0,0.5);}
+body .ui-dialog .ui-dialog-titlebar{height:23px;padding:0;margin:0;background:none;border:0 none transparent;}
+body .ui-dialog .ui-dialog-titlebar .ui-dialog-title{display:none;}
+body .ui-widget-content{border:4px solid #F7D102; background:#ebeae3}
+body .ui-dialog .ui-dialog-titlebar-close{background:#f6d20d;right:0;margin-top:-12px;}
+body .ui-dialog .ui-dialog-buttonpane{border:0 none transparent;}
+body .ui-dialog .ui-button-text{padding:0.8em 1em;}
+body .ui-widget-overlay{background:url(../images/turnplate/bg_04.png);_filter:alpha(opacity=60);}
+body  .ui-icon-closethick{ float:right;}
+.mv5{margin-left:5px;margin-right:5px;}
+
+.imgrule{ min-width:320px; max-width:640px; width:100%; margin:0 auto;}
+.imgrule img{ width:100%; vertical-align:bottom; border:0;}
+.btn_fanhui{ margin:0 auto;text-align:center;}
+.btn_fanhui a img{ border:0; width:25%; vertical-align:bottom; }
+
+.safe{ min-width:320px; max-width:640px; width:100%; margin:0 auto;}
+.safe img{ width:100%; vertical-align:bottom; border:0;}
+	.safe .btn_two a{ display:inline-block; width:50%; float:left;}
+	.safe .btn_two a img{ border:0; vertical-align:bottom;}
+	.img_safe2{ width:100%; position:relative;}
+	 a.safe_more{ position:absolute; left:4%; top:70%; width:22%; height:12%; display:inline-block; text-decoration:none;}
+
+	
