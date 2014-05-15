@@ -64,7 +64,7 @@ class IndexAction extends Action {
                     'dmx' => '亲，你给人的安全感弱爆了你造嘛！',
                 ),
             );
-            $text = $text_arr[$_GET['number'][$_GET['type']]];
+            $text = $text_arr[$_GET['number']][$_GET['type']];
         }
         $this -> assign('text', $text);
         if(!empty($_SERVER['HTTP_REFERER'])){
