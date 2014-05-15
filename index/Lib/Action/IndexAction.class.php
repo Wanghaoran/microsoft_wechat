@@ -39,6 +39,34 @@ class IndexAction extends Action {
         $this -> assign('question_type', $this -> _get('type'));
         $this -> assign('question_number', $this -> _get('number'));
         $this -> assign('question_choice', $this -> _get('choice'));
+        if($_GET['choice'] == 'no'){
+            $text = '挑战Lumia真心话大冒险赢大奖！！';
+        }else{
+            $text_arr = array(
+                1 => array(
+                    'zxh' => '小伙伴，生活不允许你慢半拍啦！',
+                    'dmx' => '小伙伴，你的生活单调得掉渣啦！',
+                ),
+                2 => array(
+                    'zxh' => '小伙伴，生活不允许你慢半拍啦！',
+                    'dmx' => '我那慢半拍得盆友，我鄙视你～',
+                ),
+                3 => array(
+                    'zxh' => '小伙伴，生活不允许你慢半拍啦！',
+                    'dmx' => '小伙伴，你做事太没效率你造吗！',
+                ),
+                4 => array(
+                    'zxh' => '小伙伴，大胆亮出你的个性吧！',
+                    'dmx' => '小伙伴，你造你特别没个性吗？',
+                ),
+                5 => array(
+                    'zxh' => '亲，你该改改丢三落四的毛病啦！',
+                    'dmx' => '亲，你给人的安全感弱爆了你造嘛！',
+                ),
+            );
+            $text = $text_arr[$_GET['number'][$_GET['type']]];
+        }
+        $this -> assign('text', $text);
         if(!empty($_SERVER['HTTP_REFERER'])){
             $this -> display('answer');
         }else{
