@@ -25,9 +25,24 @@ class IndexAction extends Action {
     public function question(){
         $result = $this -> _get('result', 'intval');
         if($result % 2 == 1){
-            $this -> show('真心话');
+            $question_type = 'zxh';
         }else{
-            $this -> show('大冒险');
+            $question_type = 'dmx';
+        }
+        $question_number = rand(1,5);
+        $this -> assign('question_number', $question_number);
+        $this -> assign('question_type', $question_type);
+        $this -> display();
+    }
+
+    public function answer(){
+        $this -> assign('question_type', $this -> _get('type'));
+        $this -> assign('question_number', $this -> _get('number'));
+        $this -> assign('question_choice', $this -> _get('choice'));
+        if(!empty($_SERVER['HTTP_REFERER'])){
+            $this -> display('answer');
+        }else{
+            $this -> display('answer2');
         }
     }
 }

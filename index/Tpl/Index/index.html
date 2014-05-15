@@ -18,6 +18,8 @@
 <div class="container">
     <div class="safe">
         <img src="__PUBLIC__/index/images/img_<-{$pic_name}->1.jpg"/>
+        <a name="start"></a>
+        <a href="#start" title="马上参与"><img src="__PUBLIC__/index/images/img_join_<-{$pic_name}->.jpg"/></a>
         <div class="btn_two">
             <a href="__URL__/rules" title="详细活动规则"><img src="__PUBLIC__/index/images/btn_rule.jpg"/></a>
             <a href="javascript:alert('活动未结束!');" title="获奖名单"><img src="__PUBLIC__/index/images/btn_list.jpg"/></a>
@@ -81,8 +83,8 @@ var turnplate = {
     curFrame : 0, //当前帧
     curSpeed : 20, //上帧的速度
     lotteryTime : 0, //抽奖次数
-    lotteryIndex : Math.floor(Math.random()*16 + 1), //奖品index
-    errorIndex : Math.floor(Math.random()*16 + 1), //异常时的奖品指针
+    lotteryIndex : Math.floor(Math.random()*15 + 1), //奖品index
+    errorIndex : Math.floor(Math.random()*15 + 1), //异常时的奖品指针
     initBoxEle : $('#turnplate #init'),
     progressEle : $('#turnplate #init span'),
     initProgressContent : '~~~^_^~~~', //初始化进度条的内容

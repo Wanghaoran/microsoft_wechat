@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>LUMIA630 真心话 大冒险</title>
+<meta http-equiv="Cache-Control" content="max-age=3600">
+<meta name="MobileOptimized" content="240">
+<meta name="apple-touch-fullscreen" content="YES">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,  minimum-scale=1.0, maximum-scale=1.0">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/question/css/common.css">
+<script src="__PUBLIC__/question/js/jquery.min.js" type="text/javascript"></script>
+<script src="__PUBLIC__/question/js/common.js" type="text/javascript"></script>
+
+
+
+
+    <script>
+        var dataForWeixin={
+            <!-- lang: js -->
+            appId:"",
+            <!-- lang: js -->
+            MsgImg:"http://www.cnhtk.cn__UPLOAD__/icon.jpg",
+            <!-- lang: js -->
+            TLImg:"http://www.cnhtk.cn__UPLOAD__/icon.jpg",
+            <!-- lang: js -->
+            url:"http://182.92.64.207__SELF__",
+            <!-- lang: js -->
+            title:"小伙伴,你的安全感弱爆了,你造吗?",
+            <!-- lang: js -->
+            desc:"小伙伴,你的安全感弱爆了,你造吗?",
+            <!-- lang: js -->
+            fakeid:"",
+            <!-- lang: js -->
+            callback:function(){}
+            <!-- lang: js -->
+        };
+        <!-- lang: js -->
+        (function(){
+            <!-- lang: js -->
+            var onBridgeReady=function(){
+                <!-- lang: js -->
+                WeixinJSBridge.on('menu:share:appmessage', function(argv){
+                    <!-- lang: js -->
+                    WeixinJSBridge.invoke('sendAppMessage',{
+                        <!-- lang: js -->
+                        "appid":dataForWeixin.appId,
+                        <!-- lang: js -->
+                        "img_url":dataForWeixin.MsgImg,
+                        <!-- lang: js -->
+                        "img_width":"120",
+                        <!-- lang: js -->
+                        "img_height":"120",
+                        <!-- lang: js -->
+                        "link":dataForWeixin.url,
+                        <!-- lang: js -->
+                        "desc":dataForWeixin.desc,
+                        <!-- lang: js -->
+                        "title":dataForWeixin.title
+                        <!-- lang: js -->
+                    }, function(res){(dataForWeixin.callback)();});
+                    <!-- lang: js -->
+                });
+                <!-- lang: js -->
+                WeixinJSBridge.on('menu:share:timeline', function(argv){
+                    <!-- lang: js -->
+                    (dataForWeixin.callback)();
+                    <!-- lang: js -->
+                    WeixinJSBridge.invoke('shareTimeline',{
+                        <!-- lang: js -->
+                        "img_url":dataForWeixin.TLImg,
+                        <!-- lang: js -->
+                        "img_width":"120",
+                        <!-- lang: js -->
+                        "img_height":"120",
+                        <!-- lang: js -->
+                        "link":dataForWeixin.url,
+                        <!-- lang: js -->
+                        "desc":dataForWeixin.desc,
+                        <!-- lang: js -->
+                        "title":dataForWeixin.title
+                        <!-- lang: js -->
+                    }, function(res){});
+                    <!-- lang: js -->
+                });
+                <!-- lang: js -->
+                WeixinJSBridge.on('menu:share:weibo', function(argv){
+                    <!-- lang: js -->
+                    WeixinJSBridge.invoke('shareWeibo',{
+                        <!-- lang: js -->
+                        "content":dataForWeixin.title,
+                        <!-- lang: js -->
+                        "url":dataForWeixin.url
+                        <!-- lang: js -->
+                    }, function(res){(dataForWeixin.callback)();});
+                    <!-- lang: js -->
+                });
+                <!-- lang: js -->
+                WeixinJSBridge.on('menu:share:facebook', function(argv){
+                    <!-- lang: js -->
+                    (dataForWeixin.callback)();
+                    <!-- lang: js -->
+                    WeixinJSBridge.invoke('shareFB',{
+                        <!-- lang: js -->
+                        "img_url":dataForWeixin.TLImg,
+                        <!-- lang: js -->
+                        "img_width":"120",
+                        <!-- lang: js -->
+                        "img_height":"120",
+                        <!-- lang: js -->
+                        "link":dataForWeixin.url,
+                        <!-- lang: js -->
+                        "desc":dataForWeixin.desc,
+                        <!-- lang: js -->
+                        "title":dataForWeixin.title
+                        <!-- lang: js -->
+                    }, function(res){});
+                    <!-- lang: js -->
+                });
+                <!-- lang: js -->
+            };
+            <!-- lang: js -->
+            if(document.addEventListener){
+                <!-- lang: js -->
+                document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+                <!-- lang: js -->
+            }else if(document.attachEvent){
+                <!-- lang: js -->
+                document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+                <!-- lang: js -->
+                document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+                <!-- lang: js -->
+            }
+            <!-- lang: js -->
+        })();
+    </script>
+
+
+
+<script type="text/javascript">
+//显示灰色 jQuery 遮罩层
+function showBg() {
+	
+	$("#hidebg").css({
+		display: "block"
+	});
+	$("#popDiv").show();
+}
+//关闭灰色 jQuery 遮罩
+function closeBg() {
+	$("#hidebg,#popDiv").hide();
+}
+</script>
+
+
+</head>
+<body>
+<!--遮罩层  start-->
+<div id="popDiv" class="mydiv" style="display:none;"> 	
+    <div class="divimg"><img src="__PUBLIC__/question/images/row.png"/></div>
+    <div>  i    <a href="javascript:closeBg()" class="btn_del">  
+       取消
+     </a>  
+    </div>  
+</div>                                   
+<div id="hidebg" class="hidebg" style="display:none"></div> 
+<!--遮罩层  end--> 
+
+	<div class="container">
+    	<div class="wenti">
+        	<img src="__PUBLIC__/question/images/img_bg<-{$question_number}->.jpg"/>
+            <div class="wt_con">
+            	<img src="__PUBLIC__/question/images/img_<-{$question_type}->_<-{$question_choice}->_<-{$question_number}->.jpg"/>
+                <div class="da_xz">
+                	<img src="__PUBLIC__/question/images/share_text.png"/>
+                	<div class="btn_share"><a onClick="showBg();"  title="分享到朋友圈"><img src="__PUBLIC__/question/images/btn_share.png"/></a></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="btn_fanhui"><a href="__ROOT__"><img src="__PUBLIC__/question/images/btn_fanhui<-{$question_number}->.png"/></a></div>
+        </div>
+    </div>
+</body>
+
+</html>
