@@ -74,6 +74,9 @@ class IndexAction extends Action {
         if(!empty($_SERVER['HTTP_REFERER'])){
             $this -> display('answer');
         }else{
+            if($_GET['choice'] == 'no'){
+                $this -> redirect('Index/index');
+            }
             $this -> display('answer2');
         }
     }
