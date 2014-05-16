@@ -39,6 +39,8 @@ class IndexAction extends Action {
         $this -> assign('question_type', $this -> _get('type'));
         $this -> assign('question_number', $this -> _get('number'));
         $this -> assign('question_choice', $this -> _get('choice'));
+
+        //文字
         if($_GET['choice'] == 'no'){
             $text = '挑战Lumia真心话大冒险赢大奖！！';
         }else{
@@ -67,6 +69,8 @@ class IndexAction extends Action {
             $text = $text_arr[$_GET['number']][$_GET['type']];
         }
         $this -> assign('text', $text);
+
+
         if(!empty($_SERVER['HTTP_REFERER'])){
             $this -> display('answer');
         }else{
