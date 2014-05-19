@@ -70,6 +70,8 @@ class IndexAction extends Action {
         }
         $this -> assign('text', $text);
 
+        dump($_SERVER);
+        /*
 
         if(!empty($_SERVER['HTTP_REFERER'])){
             $this -> display('answer');
@@ -79,5 +81,6 @@ class IndexAction extends Action {
             }
             $this -> display('answer2');
         }
+        */
     }
 }
