@@ -2,6 +2,7 @@
 // 本类由系统自动生成，仅供测试用途
 class IndexAction extends Action {
     public function index(){
+        /*
         $tpl = rand(1,4);
         $tpl_arr = array(
             1 => 'safe',
@@ -12,6 +13,8 @@ class IndexAction extends Action {
         $this -> assign('tpl', $tpl);
         $this -> assign('pic_name', $tpl_arr[$tpl]);
         $this -> display();
+        */
+        dump($_SERVER);
     }
 
     public function rules(){
