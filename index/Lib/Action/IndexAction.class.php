@@ -14,7 +14,6 @@ class IndexAction extends Action {
         $this -> assign('pic_name', $tpl_arr[$tpl]);
         $this -> display();
 
-        dump($_SERVER);
     }
 
     public function rules(){
