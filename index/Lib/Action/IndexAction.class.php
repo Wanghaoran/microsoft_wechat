@@ -72,7 +72,7 @@ class IndexAction extends Action {
         }
         $this -> assign('text', $text);
 
-        /*
+
 
         if(!empty($_SERVER['HTTP_REFERER'])){
             $this -> display('answer');
@@ -82,11 +82,11 @@ class IndexAction extends Action {
             }
             $this -> display('answer2');
         }
-        */
-        $this -> display();
+
 
     }
 
+    /*
     public function answer2(){
         $this -> assign('question_type', $this -> _get('type'));
         $this -> assign('question_number', $this -> _get('number'));
@@ -122,7 +122,7 @@ class IndexAction extends Action {
         }
         $this -> assign('text', $text);
 
-        /*
+
 
         if(!empty($_SERVER['HTTP_REFERER'])){
             $this -> display('answer');
@@ -133,9 +133,10 @@ class IndexAction extends Action {
             $this -> display('answer2');
         }
 
-        */
+
 
         $this -> display();
 
     }
+    */
 }
