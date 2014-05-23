@@ -72,6 +72,7 @@ class IndexAction extends Action {
         }
         $this -> assign('text', $text);
 
+        /*
 
         if(!empty($_SERVER['HTTP_REFERER'])){
             $this -> display('answer');
@@ -81,6 +82,60 @@ class IndexAction extends Action {
             }
             $this -> display('answer2');
         }
+        */
+        $this -> display();
+
+    }
+
+    public function answer2(){
+        $this -> assign('question_type', $this -> _get('type'));
+        $this -> assign('question_number', $this -> _get('number'));
+        $this -> assign('question_choice', $this -> _get('choice'));
+
+        //文字
+        if($_GET['choice'] == 'no'){
+            $text = '挑战Lumia真心话大冒险赢大奖！！';
+        }else{
+            $text_arr = array(
+                1 => array(
+                    'zxh' => '亲，你早该脱离单调的生活了！',
+                    'dmx' => '小伙伴，你的生活单调得掉渣啦！',
+                ),
+                2 => array(
+                    'zxh' => '小伙伴，你的节奏要加快啊！',
+                    'dmx' => '小伙伴，你慢得让人捉急啊～',
+                ),
+                3 => array(
+                    'zxh' => '亲，是时候换种方式享受工作啦！',
+                    'dmx' => '亲，你是个办公室工作狂你造吗！',
+                ),
+                4 => array(
+                    'zxh' => '小伙伴，大胆亮出你的个性吧！',
+                    'dmx' => '小伙伴，你造你特别没个性吗？',
+                ),
+                5 => array(
+                    'zxh' => '小伙伴，你太不懂自我保护啦！',
+                    'dmx' => '亲，你给人的安全感弱爆了你造嘛！',
+                ),
+            );
+            $text = $text_arr[$_GET['number']][$_GET['type']];
+        }
+        $this -> assign('text', $text);
+
+        /*
+
+        if(!empty($_SERVER['HTTP_REFERER'])){
+            $this -> display('answer');
+        }else{
+            if($_GET['choice'] == 'no'){
+                $this -> redirect('Index/index');
+            }
+            $this -> display('answer2');
+        }
+
+        */
+
+        $this -> display();
 
     }
 }
