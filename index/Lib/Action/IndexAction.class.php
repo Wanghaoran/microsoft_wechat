@@ -88,6 +88,7 @@ class IndexAction extends Action {
     }
 
     public function answer2(){
+        dump($_GET);
         $this -> assign('question_type', $this -> _get('type'));
         $this -> assign('question_number', $this -> _get('number'));
         $this -> assign('question_choice', $this -> _get('choice'));
