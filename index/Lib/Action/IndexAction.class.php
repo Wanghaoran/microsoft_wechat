@@ -86,6 +86,10 @@ class IndexAction extends Action {
 
     }
 
+    public function lists(){
+        $this -> display();
+    }
+
     /*
     public function answer2(){
         $this -> assign('question_type', $this -> _get('type'));
